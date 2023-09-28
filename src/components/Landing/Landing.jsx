@@ -1,11 +1,9 @@
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import './Landing.css';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [albumResults, setAlbumResutls] = useState([]);
-  // const navigate = useNavigate();
+  const [albumResults, setAlbumResults] = useState([]);
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
@@ -17,9 +15,11 @@ const Search = () => {
     fetch(`https://jsonplaceholder.typicode.com/photos`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         data === undefined
           ? alert('No albums found')
-          : setAlbumResutls(data.results);
+          : setAlbumResults(data);
+        // console.log(data.albumId);
       });
 
     setSearchTerm('');
@@ -41,9 +41,9 @@ const Search = () => {
       </form>
 
       <ul className='album-results'>
-        {albumResults.map((album) => (
-          <li key={album.id}>
-            <a href={`/photos?albumId=${album.albumId}`}>Album Results</a>
+        {albumResults.map((albumId) => (
+          <li key={albumId}>
+            <a href={`/photos?albumId=${albumId}`}></a>
           </li>
         ))}
       </ul>
