@@ -18,7 +18,9 @@ const Gallery = () => {
         {photos.map((photo) => (
           <Col key={photo.id}>
             <img src={photo.thumbnailUrl} alt={photo.title} />
-            <p>Title: {photo.title}</p>
+            <p>
+              Title: {photo.title} Album: {photo.albumId}
+            </p>
           </Col>
         ))}
       </Row>
