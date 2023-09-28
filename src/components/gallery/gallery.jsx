@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { Row, Col } from 'react-bootstrap';
 
-const App = () => {
+//Grabbing photo gallery information
+const Gallery = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
@@ -12,15 +14,16 @@ const App = () => {
   return (
     <div>
       <h1>Album Photos</h1>
-      <ul>
+      <Row>
         {photos.map((photo) => (
-          <li key={photo.id}>
-            {photo.id} - {photo.title}
-          </li>
+          <Col key={photo.id}>
+            <img src={photo.thumbnailUrl} alt={photo.title} />
+            <p>Title: {photo.title}</p>
+          </Col>
         ))}
-      </ul>
+      </Row>
     </div>
   );
 };
 
-export default App;
+export default Gallery;
