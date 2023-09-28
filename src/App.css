@@ -16,7 +16,3 @@ body {
 main {
   flex-grow: 1;
 }
-
-.page-title {
-  text-align: center;
-}

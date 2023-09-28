@@ -1,8 +1,8 @@
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header.jsx';
-// import Gallery from './components/Gallery/Gallery,jsx'
+import Gallery from './components/Gallery/Gallery.jsx'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div>
         <Header />
         <main className='mx-3'>
-          <Outlet />
+          <Gallery />
         </main>
         <Footer />
       </div>
