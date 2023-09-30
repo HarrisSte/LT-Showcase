@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import './Landing.css';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [albumResults, setAlbumResults] = useState([]);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -12,17 +11,19 @@ const Search = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    fetch(`https://jsonplaceholder.typicode.com/photos`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        data === undefined
-          ? alert('No albums found')
-          : setAlbumResults(data);
-        // console.log(data.albumId);
+    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${searchTerm}`)
+      .then((data) => data.json())
+      .then((albumSearch) => {
+        albumSearch === undefined
+          ? alert('no albums found')
+          : navigate('/photos', {
+              state: { results: albumSearch },
+            });
+
       });
 
     setSearchTerm('');
+    
   };
 
   return (
@@ -30,8 +31,8 @@ const Search = () => {
       <form onSubmit={onSubmit}>
         <input
           className='search-bar'
-          type='text'
-          placeholder='Search for your favorite album!'
+          type='number'
+          placeholder='Search for albums!'
           value={searchTerm}
           onChange={handleChange}
         />
@@ -39,14 +40,6 @@ const Search = () => {
           Submit
         </button>
       </form>
-
-      <ul className='album-results'>
-        {albumResults.map((albumId) => (
-          <li key={albumId}>
-            <a href={`/photos?albumId=${albumId}`}></a>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

@@ -1,25 +1,20 @@
-import { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
+import './Gallery.css';
 
-//Grabbing photo gallery information
-const Gallery = () => {
-  const [photos, setPhotos] = useState([]);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-      .then((response) => response.json())
-      .then((data) => setPhotos(data));
-  }, []);
+const ResultsCard = () => {
+  const location = useLocation();
+  const albumSearch = location.state.results;
 
   return (
     <div>
-      <h1>Album Photos</h1>
       <Row>
-        {photos.map((photo) => (
-          <Col key={photo.id}>
-            <img src={photo.thumbnailUrl} alt={photo.title} />
+        {albumSearch.map((album, index) => (
+          <Col key={index}>
+            <img src={album.thumbnailUrl} alt={album.title} />
             <p>
-              Title: {photo.title} Album: {photo.albumId}
+              Title: {album.title} Photo Number: {album.id}
             </p>
           </Col>
         ))}
@@ -28,4 +23,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default ResultsCard;
