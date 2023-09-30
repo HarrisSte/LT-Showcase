@@ -2,15 +2,13 @@
     display: inline-block;
     width: 80%;
     margin-left: 5rem;
-    margin-bottom: 4rem;
     text-align: center;
-    margin-top: 5rem;
-    margin-bottom:10rem;
+    margin-top: 8rem;
 }
 
 .search-bar {
-    width: 70%;
-    height: 2.3rem;
+    width: 50%;
+    height: 2.5rem;
     border-radius: .3rem;
 }
 
@@ -18,12 +16,15 @@
     background-color: #212529;
     padding: 5rem;
     border-radius: 1rem;
+}
 
+.search-container p {
+    color: white;
+    font-size: 1.5rem;
 }
 
 .submit-button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-weight: bolder;
 }
 
 .submit-button:hover {
@@ -32,12 +33,7 @@
 }
 
 button {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
     border: 1px solid transparent;
     padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
     border-radius: .25rem;
 }

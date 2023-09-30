@@ -2,12 +2,9 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-// import './App.css';
-
 import App from './App';
 import Landing from './components/Landing/Landing.jsx';
 import Gallery from './components/gallery/gallery.jsx';
-
 
 const router = createBrowserRouter([
   {
@@ -22,7 +19,6 @@ const router = createBrowserRouter([
         path: '/photos',
         element: <Gallery />,
       },
- 
     ],
   },
 ]);

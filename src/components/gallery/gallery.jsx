@@ -12,7 +12,7 @@ const ResultsCard = () => {
     <div>
       <Row>
         {albumSearch.map((album, index) => (
-          <Col key={index}>
+          <Col className='gallery-results'key={index}>
             <img src={album.thumbnailUrl} alt={album.title} />
             <p>
               <b>Title:</b> {album.title} <br></br> <b>PhotoID:</b> {album.id}

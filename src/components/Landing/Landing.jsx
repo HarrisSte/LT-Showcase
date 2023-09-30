@@ -31,7 +31,10 @@ const Search = () => {
   return (
     <div className='search'>
       <Row className='search-container'>
-        <Col className='mx-5'>
+        <div>
+          <p>Need to find a specific album? Go ahead and enter the album number you want below. Voila!</p>
+        </div>
+        <Col>
           <form onSubmit={onSubmit}>
             <input
               className='search-bar'
