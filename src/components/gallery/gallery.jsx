@@ -15,7 +15,7 @@ const ResultsCard = () => {
           <Col key={index}>
             <img src={album.thumbnailUrl} alt={album.title} />
             <p>
-              Title: {album.title} Photo Number: {album.id}
+              <b>Title:</b> {album.title} <br></br> <b>PhotoID:</b> {album.id}
             </p>
           </Col>
         ))}
