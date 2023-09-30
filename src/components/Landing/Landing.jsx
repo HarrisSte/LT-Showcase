@@ -38,7 +38,7 @@ const Search = () => {
               type='number'
               min='1'
               max='100'
-              required='true'
+              required={true}
               placeholder='Search albums...'
               value={searchTerm}
               onChange={handleChange}
