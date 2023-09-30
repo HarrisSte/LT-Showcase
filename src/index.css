@@ -12,30 +12,3 @@ body {
   min-height: 100vh;
   background-size: cover;
 }
-
-@media screen and (max-width: 768px) {
-
-  html,
-  body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .page {
-    display: block;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  .content {
-    width: 100%;
-  }
-
-  #root {
-    display: block;
-    flex-direction: column;
-    min-height: 100vh;
-    background-size: cover;
-  }
-}

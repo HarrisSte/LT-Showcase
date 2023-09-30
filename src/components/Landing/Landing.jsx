@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { Row, Col } from 'react-bootstrap';
+
+import './Landing.css';
+
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
@@ -19,27 +23,31 @@ const Search = () => {
           : navigate('/photos', {
               state: { results: albumSearch },
             });
-
       });
 
     setSearchTerm('');
-    
   };
 
   return (
     <div className='search'>
-      <form onSubmit={onSubmit}>
-        <input
-          className='search-bar'
-          type='number'
-          placeholder='Search for albums!'
-          value={searchTerm}
-          onChange={handleChange}
-        />
-        <button className='submit-button' type='submit'>
-          Submit
-        </button>
-      </form>
+      <Row>
+        <Col>
+          <form onSubmit={onSubmit}>
+            <input
+              className='search-bar'
+              type='number'
+              min='1'
+              max='100'
+              placeholder='Search for albums!'
+              value={searchTerm}
+              onChange={handleChange}
+            />
+            <button className='submit-button' type='submit'>
+              <i className='bi bi-search'></i>
+            </button>
+          </form>
+        </Col>
+      </Row>
     </div>
   );
 };

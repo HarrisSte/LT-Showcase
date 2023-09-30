@@ -1,7 +1,11 @@
 import './Header.css';
 
-function Footer() {
-  return <footer>Temp. Header</footer>;
+function Header() {
+  return (
+    <header className='header'>
+      <h1>LT Showcase || Photo Gallery</h1>
+    </header>
+  );
 }
 
-export default Footer;
+export default Header;

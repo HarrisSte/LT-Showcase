@@ -2,11 +2,11 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import './index.css';
+import './App.css';
 
 import App from './App';
-import Landing from './components/Landing/Landing';
-import Gallery from './components/gallery/gallery';
+import Landing from './components/Landing/Landing.jsx';
+import Gallery from './components/gallery/gallery.jsx';
 
 
 const router = createBrowserRouter([
