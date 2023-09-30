@@ -30,15 +30,16 @@ const Search = () => {
 
   return (
     <div className='search'>
-      <Row>
-        <Col>
+      <Row className='search-container'>
+        <Col className='mx-5'>
           <form onSubmit={onSubmit}>
             <input
               className='search-bar'
               type='number'
               min='1'
               max='100'
-              placeholder='Search for albums!'
+              required='true'
+              placeholder='Search albums...'
               value={searchTerm}
               onChange={handleChange}
             />

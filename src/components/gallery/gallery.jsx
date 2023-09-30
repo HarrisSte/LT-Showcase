@@ -1,6 +1,7 @@
 // import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
+
 import './Gallery.css';
 
 const ResultsCard = () => {

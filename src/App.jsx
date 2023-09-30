@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
         <Header />
-        <main className='mx-3'>
+        <main className='mx-5'>
           <Outlet />
         </main>
         <Footer />

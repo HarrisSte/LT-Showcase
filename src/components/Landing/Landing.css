@@ -4,13 +4,21 @@
     margin-left: 5rem;
     margin-bottom: 4rem;
     text-align: center;
+    margin-top: 5rem;
+    margin-bottom:10rem;
 }
 
 .search-bar {
     width: 70%;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    height: 2.3rem;
     border-radius: .3rem;
+}
+
+.search-container {
+    background-color: #212529;
+    padding: 2rem;
+    border-radius: 1rem;
+
 }
 
 .submit-button {
@@ -19,7 +27,7 @@
 }
 
 .submit-button:hover {
-    box-shadow: 0 0 10px 5px rgba(11, 123, 193, 0.5);
+    box-shadow: 0 0 10px 5px rgba(9, 81, 108);
     border: none;
 }
 
