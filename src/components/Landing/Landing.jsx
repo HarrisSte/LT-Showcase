@@ -32,7 +32,7 @@ const Search = () => {
     <div className='search'>
       <Row className='search-container'>
         <div>
-          <p>Need to find a specific album? Go ahead and enter the album number you want below. Voila!</p>
+          <p>Need to find a specific album? <br></br>Enter the album number (1-100) you want below. Voila!</p>
         </div>
         <Col>
           <form onSubmit={onSubmit}>
